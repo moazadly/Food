@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import "./cart.css";
 import { StoreContext } from "../../context/StoreContext";
+import { Link } from "react-router-dom";
+
 function Cart() {
   const {
     cartItems,
@@ -9,6 +11,7 @@ function Cart() {
     getCartTotalAmount,
     getNumberOfProducts,
   } = useContext(StoreContext);
+
   return (
     <div className="cart">
       <div className="cart-items">
@@ -67,7 +70,10 @@ function Cart() {
                 <b>${getCartTotalAmount() + 5}</b>
               </div>
             </div>
-            <button>PROCEED TO CHECKOUT</button>
+
+            <Link to="/order">
+              <button>PROCEED TO CHECKOUT</button>
+            </Link>
           </div>
           <div className="cart-promocode">
             <div>

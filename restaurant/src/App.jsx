@@ -20,7 +20,7 @@ function App() {
           <Route path="/order" element={<PlaceOrder />} />
         </Routes>
       </div>
-      <div className={`app ${showLogin ? "hidden" : ""}`}>
+      <div className={`${showLogin ? "hidden" : ""}`}>
         <Footer />
       </div>
     </>
